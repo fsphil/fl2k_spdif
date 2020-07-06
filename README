@@ -1,0 +1,34 @@
+
+ -[ fl2k_spdif - Output S/PDIF digital audio with an fl2k ]-
+
+
+WHAT'S IT DO
+
+Transmits a S/PDIF digital audio stream with an fl2k-compatible VGA adaptor.
+
+Input is raw 16-bit stereo.
+Output is on the Red channel.
+
+
+REQUIREMENTS
+
+Depends on libosmo-fl2k.
+
+
+INSTALL
+
+make
+make install
+
+
+EXAMPLES
+
+# Play a raw audio file, 48 kHz, on repeat
+$ fl2k_spdif -s 48000 audio.raw -r
+
+# Capture and stream audio
+$ arecord -fcd - | fl2k_spdif -
+
+
+-Philip Heron <phil@sanslogic.co.uk>
+
